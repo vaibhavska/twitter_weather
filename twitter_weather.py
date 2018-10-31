@@ -1,5 +1,6 @@
 from selenium import webdriver
 import re
+import numpy
 import time
 browser=webdriver.Chrome()
 # OPening part for loging into TWITTER
@@ -11,6 +12,9 @@ a.send_keys("")#your password here
 a=browser.find_element_by_xpath('//*[@id="page-container"]/div/div[1]/form/div[2]/button')#for the submit button
 a.submit()
 #now we are logged into twitter
+for i in range(1,10):
+    print(i);
+    
 while True:
     time.sleep(10)
     value=browser.find_elements_by_xpath('.//span[@class = "count-inner"]')#for finding the number of notifications
